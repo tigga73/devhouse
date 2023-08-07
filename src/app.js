@@ -1,9 +1,20 @@
 import express from 'express';
+import mongoose from 'mongoose';
 import routes from './routes';
 
 class App {
   constructor() {
     this.server = express();
+
+    mongoose.connect(
+      `mongodb+srv://tiagocardosodev:${encodeURIComponent(
+        'r357B0w@Ca2*',
+      )}@cluster0.1la0qce.mongodb.net/devhouse?retryWrites=true&w=majority`,
+      {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+      },
+    );
 
     this.middlewares();
     this.routes();
