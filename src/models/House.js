@@ -6,7 +6,7 @@ const HouseSchema = new Schema(
     description: String,
     price: Number,
     location: String,
-    staus: Boolean,
+    status: Boolean,
     user: {
       type: Schema.Types.ObjectId,
       ref: 'User',
