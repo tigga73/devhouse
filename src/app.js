@@ -1,8 +1,7 @@
+import path from 'path';
 import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
-
-import path from 'path';
 
 import routes from './routes';
 
@@ -12,12 +11,12 @@ class App {
 
     mongoose.connect(
       `mongodb+srv://tiagocardosodev:${encodeURIComponent(
-        'r357B0w@Ca2*'
+        'r357B0w@Ca2*',
       )}@cluster0.1la0qce.mongodb.net/devhouse?retryWrites=true&w=majority`,
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,
-      }
+      },
     );
 
     this.middlewares();

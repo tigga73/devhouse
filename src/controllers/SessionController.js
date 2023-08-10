@@ -1,5 +1,5 @@
-import User from '../models/User';
 import * as Yup from 'yup';
+import User from '../models/User';
 
 class SessionController {
   async store(req, res) {
@@ -18,7 +18,7 @@ class SessionController {
       user = await User.create({ email });
     }
 
-    res.json(user);
+    return res.json(user);
   }
 }
 
